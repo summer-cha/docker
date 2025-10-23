@@ -8,7 +8,7 @@
       "volumes": [
         {
           "hostPath": "${APP_DATA_DIR}/config",
-          "containerPath": "/config",
+          "containerPath": "config.yaml",
           "readOnly": true,
           "shared": false,
           "private": false
