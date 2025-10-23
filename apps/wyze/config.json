@@ -1,6 +1,6 @@
 {
-  "name": "Wyze MJPEG Proxy",
-  "id": "wyze-mjpeg-proxy",
+  "name": "Wyze",
+  "id": "wyze",
   "available": true,
   "short_desc": "MJPEG proxy for Wyze cameras and other RTSP streams",
   "author": "kamermans",
