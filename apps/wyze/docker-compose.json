@@ -7,7 +7,7 @@
       "internalPort": 8190,
       "volumes": [
         {
-          "hostPath": "./",
+          "hostPath": "${APP_DATA_DIR}/",
           "containerPath": "/config.yaml",
           "readOnly": true,
           "shared": true,
