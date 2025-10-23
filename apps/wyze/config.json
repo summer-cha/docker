@@ -5,7 +5,7 @@
   "port": 8190,
   "id": "wyze-mjpeg-proxy",
   "tipi_version": 3,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "categories": ["media", "utilities"],
   "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
   "short_desc": "MJPEG proxy for Wyze cameras and other RTSP streams",
