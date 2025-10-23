@@ -12,24 +12,43 @@ A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJ
 
 ## Configuration
 
-### Required Settings
+After installation, you need to create a `config.yaml` file in the app's data directory with your RTSP stream settings.
 
-- **RTSP Stream URL**: The RTSP URL of your camera or video source
-  - Format: `rtsp://username:password@ip:port/path`
-  - Example: `rtsp://root:123456@192.168.1.201:554/ch0_0.h264`
+### Configuration File Location
 
-### Optional Settings
+The configuration file should be placed at: `{APP_DATA_DIR}/config.yaml`
 
-- **Resolution**: Output resolution (640x480, 1280x720, 1920x1080)
-- **JPEG Quality**: Image quality from 1-100 (higher = better quality)
-- **Frame Rate**: Output frames per second (1-30)
+### Example Configuration
+
+```yaml
+verbosity: 0
+port: 8190
+streams:
+  - name: printer-cam
+    source: rtsp://root:123456@192.168.1.201:554/ch0_0.h264
+    resolution: 1280x720
+    quality: 60
+    framerate: 3
+```
+
+### Configuration Options
+
+- **verbosity**: Log level (0-3, higher = more verbose)
+- **port**: Port number for the MJPEG proxy (default: 8190)
+- **streams**: Array of RTSP streams to proxy
+  - **name**: Friendly name for the stream
+  - **source**: RTSP URL of your camera
+  - **resolution**: Output resolution (e.g., 1280x720, 1920x1080)
+  - **quality**: JPEG quality (1-100, higher = better quality)
+  - **framerate**: Output frame rate (1-30 fps)
 
 ## Usage
 
-1. Configure the RTSP URL of your camera
-2. Adjust quality and frame rate settings as needed
-3. Access the MJPEG stream via the web interface
-4. Use the stream URL in other applications or web pages
+1. Install the application
+2. Create/edit the `config.yaml` file in the app's data directory
+3. Configure your RTSP stream URLs and settings
+4. Restart the application
+5. Access the MJPEG streams via the web interface
 
 ## Supported Cameras
 

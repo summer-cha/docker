@@ -1,63 +1,20 @@
 {
   "name": "Wyze MJPEG Proxy",
-  "id": "wyze-mjpeg-proxy",
   "available": true,
-  "short_desc": "MJPEG proxy for Wyze cameras and other RTSP streams",
-  "author": "kamermans",
+  "exposable": true,
   "port": 8190,
-  "categories": [
-    "media",
-    "utilities"
-  ],
-  "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
+  "id": "wyze-mjpeg-proxy",
   "tipi_version": 3,
   "version": "1.0.0",
+  "categories": ["media", "utilities"],
+  "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
+  "short_desc": "MJPEG proxy for Wyze cameras and other RTSP streams",
+  "author": "kamermans",
   "source": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "website": "https://github.com/kamermans/wyze-mjpeg-proxy",
-  "exposable": true,
-  "supported_architectures": [
-    "arm64",
-    "amd64"
-  ],
-  "created_at": 1745674974072,
-  "updated_at": 1745674974072,
+  "form_fields": [],
+  "supported_architectures": ["arm64", "amd64"],
   "dynamic_config": true,
-  "form_fields": [
-    {
-      "env_variable": "RTSP_URL",
-      "label": "RTSP Stream URL",
-      "type": "url",
-      "required": true,
-      "placeholder": "rtsp://username:password@ip:port/path",
-      "hint": "The RTSP stream URL to proxy (e.g., rtsp://root:123456@192.168.1.201:554/ch0_0.h264)"
-    },
-    {
-      "env_variable": "RESOLUTION",
-      "label": "Resolution",
-      "type": "text",
-      "required": false,
-      "default": "1280x720",
-      "hint": "Output resolution for the MJPEG stream (e.g., 640x480, 1280x720, 1920x1080)"
-    },
-    {
-      "env_variable": "QUALITY",
-      "label": "JPEG Quality",
-      "type": "number",
-      "required": false,
-      "default": 60,
-      "min": 1,
-      "max": 100,
-      "hint": "JPEG quality (1-100, higher is better quality)"
-    },
-    {
-      "env_variable": "FRAMERATE",
-      "label": "Frame Rate",
-      "type": "number",
-      "required": false,
-      "default": 3,
-      "min": 1,
-      "max": 30,
-      "hint": "Output frame rate (frames per second)"
-    }
-  ]
+  "created_at": 1745674974072,
+  "updated_at": 1745674974072
 }
