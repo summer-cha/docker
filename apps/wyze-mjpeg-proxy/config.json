@@ -6,7 +6,7 @@
   "author": "kamermans",
   "port": 8190,
   "categories": [
-    "media",
+    "chacha",
     "utilities"
   ],
   "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
