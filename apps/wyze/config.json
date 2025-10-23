@@ -1,68 +1,25 @@
 {
-  "name": "Wyze",
-  "id": "wyze",
+  "name": "Whoami",
+  "id": "whoami",
   "available": true,
-  "short_desc": "MJPEG proxy for Wyze cameras and other RTSP streams",
-  "author": "kamermans",
-  "port": 8190,
+  "short_desc": "Tiny Go server that prints os information and HTTP request to output.",
+  "author": "traefik",
+  "port": 8382,
   "categories": [
-    "chacha",
-    "utilities"
+    "text"
   ],
-  "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
+  "description": "Tiny Go webserver that prints OS information and HTTP request to output.",
   "tipi_version": 3,
-  "version": "1.0.0",
-  "source": "https://github.com/kamermans/wyze-mjpeg-proxy",
-  "website": "https://github.com/kamermans/wyze-mjpeg-proxy",
+  "version": "1.11.0",
+  "source": "https://github.com/traefik/whoami",
+  "website": "https://github.com/traefik/whoami",
   "exposable": true,
   "supported_architectures": [
     "arm64",
     "amd64"
   ],
-  "created_at": 1745674974072,
+  "created_at": 1745082405284,
   "updated_at": 1745674974072,
   "dynamic_config": true,
-  "form_fields": [
-    {
-      "name": "RTSP_URL",
-      "label": "RTSP Stream URL",
-      "type": "text",
-      "required": true,
-      "placeholder": "rtsp://username:password@ip:port/path",
-      "description": "The RTSP stream URL to proxy (e.g., rtsp://root:123456@192.168.1.201:554/ch0_0.h264)"
-    },
-    {
-      "name": "RESOLUTION",
-      "label": "Resolution",
-      "type": "select",
-      "required": false,
-      "default": "1280x720",
-      "options": [
-        "640x480",
-        "1280x720",
-        "1920x1080"
-      ],
-      "description": "Output resolution for the MJPEG stream"
-    },
-    {
-      "name": "QUALITY",
-      "label": "JPEG Quality",
-      "type": "number",
-      "required": false,
-      "default": 60,
-      "min": 1,
-      "max": 100,
-      "description": "JPEG quality (1-100, higher is better quality)"
-    },
-    {
-      "name": "FRAMERATE",
-      "label": "Frame Rate",
-      "type": "number",
-      "required": false,
-      "default": 3,
-      "min": 1,
-      "max": 30,
-      "description": "Output frame rate (frames per second)"
-    }
-  ]
+  "form_fields": []
 }
