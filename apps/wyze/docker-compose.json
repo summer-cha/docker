@@ -1,15 +1,17 @@
 {
+  "schemaVersion": 2,
   "services": [
     {
       "name": "wyze-mjpeg-proxy",
       "image": "kamermans/wyze-mjpeg-proxy:latest",
-      "isMain": true,
       "internalPort": 8190,
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/config.yaml",
+          "hostPath": "./config.yaml",
           "containerPath": "/config.yaml",
-          "readOnly": true
+          "readOnly": true,
+          "shared": false,
+          "private": false
         }
       ]
     }
