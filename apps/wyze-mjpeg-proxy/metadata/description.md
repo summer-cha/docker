@@ -27,11 +27,12 @@
 安装完成后，点击"打开"按钮即可查看视频流。
 
 
----
+
 
 ## 多摄像头配置（测试通过 ✅）
 
 ```
+
 services:
   config-generator:
     command:
@@ -55,6 +56,7 @@ services:
         EOF
         cat /shared/config.yaml
         sleep infinity
+		
 ```
 
 **访问地址：**
