@@ -31,7 +31,7 @@
 
 ## 多摄像头配置（测试通过 ✅）
 
-```yaml
+```
 services:
   config-generator:
     command:
