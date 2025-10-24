@@ -6,31 +6,11 @@
       "image": "kamermans/wyze-mjpeg-proxy:latest",
       "isMain": true,
       "internalPort": 8190,
-      "command": [
-        "sh",
-        "-c",
-        "echo 'verbosity: 0' > /config.yaml && echo 'port: 8190' >> /config.yaml && echo 'streams:' >> /config.yaml && echo \"  - name: $CAMERA_NAME\" >> /config.yaml && echo \"    source: $RTSP_SOURCE\" >> /config.yaml && echo \"    resolution: $RESOLUTION\" >> /config.yaml && echo \"    quality: $QUALITY\" >> /config.yaml && echo \"    framerate: $FRAMERATE\" >> /config.yaml && cat /config.yaml && exec /wyze-mjpeg-proxy"
-      ],
-      "environment": [
+      "volumes": [
         {
-          "key": "CAMERA_NAME",
-          "value": "${CAMERA_NAME}"
-        },
-        {
-          "key": "RTSP_SOURCE",
-          "value": "${RTSP_SOURCE}"
-        },
-        {
-          "key": "RESOLUTION",
-          "value": "${RESOLUTION}"
-        },
-        {
-          "key": "QUALITY",
-          "value": "${QUALITY}"
-        },
-        {
-          "key": "FRAMERATE",
-          "value": "${FRAMERATE}"
+          "hostPath": "${APP_DATA_DIR}/data/config.yaml",
+          "containerPath": "/config.yaml",
+          "readOnly": false
         }
       ]
     }

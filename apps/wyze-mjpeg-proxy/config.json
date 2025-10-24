@@ -12,7 +12,7 @@
   ],
   "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
   "tipi_version": 1,
-  "version": "latest77",
+  "version": "latest9",
   "source": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "website": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "exposable": true,
@@ -23,51 +23,6 @@
   "created_at": 1729742400000,
   "updated_at": 1729742400000,
   "dynamic_config": true,
-  "form_fields": [
-    {
-      "type": "text",
-      "label": "摄像头名称",
-      "env_variable": "CAMERA_NAME",
-      "default": "printer-cam",
-      "required": true,
-      "hint": "用于访问视频流的名称，如 printer-cam"
-    },
-    {
-      "type": "text",
-      "label": "RTSP 地址",
-      "env_variable": "RTSP_SOURCE",
-      "default": "rtsp://root:123456@192.168.1.201:554/ch0_0.h264",
-      "required": true,
-      "hint": "格式: rtsp://用户名:密码@IP:端口/路径"
-    },
-    {
-      "type": "text",
-      "label": "分辨率",
-      "env_variable": "RESOLUTION",
-      "default": "1280x720",
-      "required": true,
-      "hint": "如: 1280x720, 1920x1080, 640x480"
-    },
-    {
-      "type": "number",
-      "label": "质量 (1-100)",
-      "env_variable": "QUALITY",
-      "default": "60",
-      "min": 1,
-      "max": 100,
-      "required": true,
-      "hint": "JPEG 质量，推荐 60-80"
-    },
-    {
-      "type": "number",
-      "label": "帧率 (1-30)",
-      "env_variable": "FRAMERATE",
-      "default": "3",
-      "min": 1,
-      "max": 30,
-      "required": true,
-      "hint": "每秒帧数，推荐 3-5"
-    }
-  ]
+  "form_fields": []
 }
 

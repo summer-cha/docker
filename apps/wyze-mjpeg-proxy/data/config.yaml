@@ -1,0 +1,9 @@
+verbosity: 0
+port: 8190
+streams:
+  - name: printer-cam
+    source: rtsp://root:123456@192.168.1.201:554/ch0_0.h264
+    resolution: 1280x720
+    quality: 60
+    framerate: 3
+
