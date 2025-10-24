@@ -1,4 +1,4 @@
-# Obico ML API1
+# Obico ML API
 
 AI 驱动的 3D 打印故障检测 API 服务，提供实时打印故障检测能力。
 

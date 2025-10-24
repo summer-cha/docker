@@ -23,10 +23,6 @@
         {
           "key": "FLASK_APP",
           "value": "server.py"
-        },
-        {
-          "key": "CUDA_VISIBLE_DEVICES",
-          "value": ""
         }
       ],
       "volumes": [
