@@ -1,7 +1,7 @@
 {
   "name": "Wyze MJPEG Proxy",
   "id": "wyze-mjpeg-proxy",
-  "urn": "example-appstore:wyze-mjpeg-proxy",
+  "urn": "docker:wyze-mjpeg-proxy",
   "available": true,
   "short_desc": "将RTSP视频流转换为MJPEG格式的轻量级代理服务",
   "author": "kamermans",
@@ -12,7 +12,7 @@
   ],
   "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
   "tipi_version": 1,
-  "version": "latest5",
+  "version": "latest78",
   "source": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "website": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "exposable": true,
