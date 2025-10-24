@@ -9,13 +9,9 @@
       "command": [
         "bash",
         "-c",
-        "gunicorn --bind 0.0.0.0:$PORT --workers 1 wsgi"
+        "gunicorn --bind 0.0.0.0:3333 --workers 1 wsgi"
       ],
       "environment": [
-        {
-          "key": "PORT",
-          "value": "3333"
-        },
         {
           "key": "DEBUG",
           "value": "True"
