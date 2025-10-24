@@ -2,14 +2,18 @@
   "schemaVersion": 2,
   "services": [
     {
-      "name": "wyze-mjpeg-proxy-wrapper",
+      "name": "config-generator",
       "image": "alpine:latest",
-      "isMain": true,
-      "internalPort": 8190,
       "command": [
         "sh",
         "-c",
-        "apk add --no-cache curl ffmpeg && wget -O /usr/local/bin/wyze-mjpeg-proxy https://github.com/kamermans/wyze-mjpeg-proxy/releases/latest/download/wyze-mjpeg-proxy-linux-$(uname -m | sed 's/aarch64/arm64/; s/x86_64/amd64/') && chmod +x /usr/local/bin/wyze-mjpeg-proxy && printf 'verbosity: 0\\nport: 8190\\nstreams:\\n  - name: %s\\n    source: %s\\n    resolution: %s\\n    quality: %s\\n    framerate: %s\\n' \"$CAMERA_NAME\" \"$RTSP_SOURCE\" \"$RESOLUTION\" \"$QUALITY\" \"$FRAMERATE\" > /config.yaml && cat /config.yaml && exec wyze-mjpeg-proxy"
+        "printf 'verbosity: 0\\nport: 8190\\nstreams:\\n  - name: %s\\n    source: %s\\n    resolution: %s\\n    quality: %s\\n    framerate: %s\\n' \"$CAMERA_NAME\" \"$RTSP_SOURCE\" \"$RESOLUTION\" \"$QUALITY\" \"$FRAMERATE\" > /shared/config.yaml && cat /shared/config.yaml && sleep infinity"
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/shared"
+        }
       ],
       "environment": [
         {
@@ -31,6 +35,24 @@
         {
           "key": "FRAMERATE",
           "value": "${FRAMERATE}"
+        }
+      ]
+    },
+    {
+      "name": "wyze-mjpeg-proxy",
+      "image": "kamermans/wyze-mjpeg-proxy:latest",
+      "isMain": true,
+      "internalPort": 8190,
+      "dependsOn": {
+        "config-generator": {
+          "condition": "service_started"
+        }
+      },
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config.yaml",
+          "containerPath": "/config.yaml",
+          "readOnly": true
         }
       ]
     }

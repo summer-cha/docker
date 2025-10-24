@@ -12,7 +12,7 @@
   ],
   "description": "A lightweight MJPEG proxy that converts RTSP streams (like Wyze cameras) into MJPEG streams that can be viewed in web browsers or integrated with other applications.",
   "tipi_version": 1,
-  "version": "latest78",
+  "version": "latest",
   "source": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "website": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "exposable": true,
