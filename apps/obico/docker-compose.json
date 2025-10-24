@@ -6,6 +6,11 @@
       "image": "ghcr.io/gabe565/obico/ml-api:latest",
       "isMain": true,
       "internalPort": 3333,
+      "command": [
+        "python",
+        "-m",
+        "lib.server"
+      ],
       "environment": [
         {
           "key": "ML_API_HOST",
@@ -14,6 +19,10 @@
         {
           "key": "ML_API_PORT",
           "value": "${ML_API_PORT}"
+        },
+        {
+          "key": "CUDA_VISIBLE_DEVICES",
+          "value": ""
         }
       ],
       "volumes": [
