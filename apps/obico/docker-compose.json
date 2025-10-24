@@ -7,18 +7,22 @@
       "isMain": true,
       "internalPort": 3333,
       "command": [
-        "python",
-        "-m",
-        "lib.server"
+        "bash",
+        "-c",
+        "gunicorn --bind 0.0.0.0:$PORT --workers 1 wsgi"
       ],
       "environment": [
         {
-          "key": "ML_API_HOST",
-          "value": "${ML_API_HOST}"
+          "key": "PORT",
+          "value": "3333"
         },
         {
-          "key": "ML_API_PORT",
-          "value": "${ML_API_PORT}"
+          "key": "DEBUG",
+          "value": "True"
+        },
+        {
+          "key": "FLASK_APP",
+          "value": "server.py"
         },
         {
           "key": "CUDA_VISIBLE_DEVICES",
