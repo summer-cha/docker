@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "obico-ml-api",
+      "image": "ghcr.io/gabe565/obico/ml-api:latest",
+      "isMain": true,
+      "internalPort": 3333,
+      "environment": [
+        {
+          "key": "ML_API_HOST",
+          "value": "${ML_API_HOST}"
+        },
+        {
+          "key": "ML_API_PORT",
+          "value": "${ML_API_PORT}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/app/data"
+        }
+      ]
+    }
+  ]
+}
+

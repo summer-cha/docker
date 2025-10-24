@@ -1,0 +1,45 @@
+{
+  "name": "Obico ML API",
+  "id": "obico",
+  "urn": "docker:obico",
+  "available": true,
+  "short_desc": "3D打印机AI故障检测API服务",
+  "author": "TheSpaghettiDetective",
+  "port": 3333,
+  "categories": [
+    "utilities",
+    "automation"
+  ],
+  "description": "Obico ML API provides AI-powered failure detection for 3D printing. This service can be called via REST API to detect printing failures in real-time.",
+  "tipi_version": 1,
+  "version": "latest",
+  "source": "https://github.com/TheSpaghettiDetective/obico-server",
+  "website": "https://www.obico.io/",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1729742400000,
+  "updated_at": 1729742400000,
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "API 监听地址",
+      "env_variable": "ML_API_HOST",
+      "default": "0.0.0.0",
+      "required": false,
+      "hint": "默认监听所有网络接口"
+    },
+    {
+      "type": "number",
+      "label": "API 端口",
+      "env_variable": "ML_API_PORT",
+      "default": "3333",
+      "required": false,
+      "hint": "ML API 监听端口"
+    }
+  ]
+}
+
