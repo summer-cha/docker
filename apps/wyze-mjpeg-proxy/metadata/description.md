@@ -5,75 +5,46 @@
 ## 功能特点
 
 - RTSP 转 MJPEG 转换
-- 支持多摄像头
+- 界面化配置，无需手动编辑文件
 - 可调节分辨率、质量、帧率
 - 轻量级，资源占用少
 
 ## 配置说明
 
-安装后需要编辑配置文件。
+安装时在设置界面填写配置参数。
 
-### 配置文件位置
+### 配置参数
 
-应用安装后会自动创建配置模板：
-```
-{APP_DATA_DIR}/data/config.yaml
-```
+安装应用时需要填写以下参数：
 
-### 编辑配置
+**摄像头名称**
+- 用于访问视频流的名称
+- 示例：printer-cam
 
-通过 Runtipi 文件管理或 SSH 编辑配置文件：
+**RTSP 地址**
+- 摄像头的 RTSP 流地址
+- 格式：rtsp://用户名:密码@IP:端口/路径
+- 示例：rtsp://root:123456@192.168.1.201:554/ch0_0.h264
 
-### 配置示例
+**分辨率**
+- 视频输出分辨率
+- 示例：1280x720, 1920x1080, 640x480
 
-**单摄像头：**
-```yaml
-verbosity: 0
-port: 8190
-streams:
-  - name: printer-cam
-    source: rtsp://root:123456@192.168.1.201:554/ch0_0.h264
-    resolution: 1280x720
-    quality: 60
-    framerate: 3
-```
+**质量 (1-100)**
+- JPEG 压缩质量
+- 推荐：60-80
 
-**多摄像头：**
-```yaml
-verbosity: 0
-port: 8190
-streams:
-  - name: printer-cam
-    source: rtsp://root:123456@192.168.1.201:554/ch0_0.h264
-    resolution: 1280x720
-    quality: 60
-    framerate: 3
-  - name: front-door
-    source: rtsp://admin:password@192.168.1.202:554/stream1
-    resolution: 1920x1080
-    quality: 80
-    framerate: 5
-```
-
-### 参数说明
-
-| 参数 | 说明 | 示例 |
-|------|------|------|
-| verbosity | 日志级别 (0-3) | 0 |
-| port | 服务端口 | 8190 |
-| name | 流名称 | printer-cam |
-| source | RTSP 地址 | rtsp://user:pass@192.168.1.x:554/path |
-| resolution | 分辨率 | 1280x720 |
-| quality | 质量 (1-100) | 60 |
-| framerate | 帧率 (1-30) | 3 |
+**帧率 (1-30)**
+- 每秒帧数
+- 推荐：3-5
 
 ## 使用步骤
 
-1. 安装应用
-2. 编辑 `{APP_DATA_DIR}/data/config.yaml` 配置文件
-3. 修改 RTSP 地址、用户名、密码
-4. 重启应用
-5. 访问：`http://你的服务器:8190/`
+1. 点击安装应用
+2. 在安装界面填写配置参数
+3. 填写你的摄像头 RTSP 地址
+4. 点击"安装"按钮
+5. 安装完成后访问：`http://你的服务器:8190/`
 
 ## 访问视频流
 

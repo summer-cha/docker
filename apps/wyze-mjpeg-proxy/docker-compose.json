@@ -6,11 +6,37 @@
       "image": "kamermans/wyze-mjpeg-proxy:latest",
       "isMain": true,
       "internalPort": 8190,
+      "command": [
+        "/bin/sh",
+        "/entrypoint.sh"
+      ],
       "volumes": [
         {
-          "hostPath": "${APP_DATA_DIR}/data/config.yaml",
-          "containerPath": "/config.yaml",
+          "hostPath": "${APP_DATA_DIR}/metadata/entrypoint.sh",
+          "containerPath": "/entrypoint.sh",
           "readOnly": true
+        }
+      ],
+      "environment": [
+        {
+          "key": "CAMERA_NAME",
+          "value": "${CAMERA_NAME}"
+        },
+        {
+          "key": "RTSP_SOURCE",
+          "value": "${RTSP_SOURCE}"
+        },
+        {
+          "key": "RESOLUTION",
+          "value": "${RESOLUTION}"
+        },
+        {
+          "key": "QUALITY",
+          "value": "${QUALITY}"
+        },
+        {
+          "key": "FRAMERATE",
+          "value": "${FRAMERATE}"
         }
       ]
     }
