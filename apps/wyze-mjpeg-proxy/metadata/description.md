@@ -78,7 +78,7 @@ services:
 3. 点击 **"User config"** 标签
 4. 启用 **"Enable user config"** 开关
 5. 选择 **"docker-compose.yml"** 标签
-6. 粘贴上面对应的配置（复制后自行替换RTSP地址等参数）
+6. 粘贴上面配置（复制后自行替换RTSP地址等参数）
 7. 点击 **"Save"** 保存
 8. 然后重新启动使配置生效
 
