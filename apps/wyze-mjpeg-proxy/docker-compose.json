@@ -10,7 +10,7 @@
         {
           "hostPath": "${APP_DATA_DIR}/data/config.yaml",
           "containerPath": "/config.yaml",
-          "readOnly": false
+          "readOnly": true
         }
       ]
     }
