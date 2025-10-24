@@ -16,6 +16,7 @@
   "source": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "website": "https://github.com/kamermans/wyze-mjpeg-proxy",
   "exposable": true,
+  "url_suffix": "/printer-cam/stream.mjpg",
   "supported_architectures": [
     "arm64",
     "amd64"
