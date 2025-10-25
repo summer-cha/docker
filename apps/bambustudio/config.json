@@ -6,6 +6,7 @@
   "short_desc": "拓竹切片软件（网页版）",
   "author": "LinuxServer.io",
   "port": 3001,
+  "https": true,
   "categories": [
     "chacha",
     "print"
