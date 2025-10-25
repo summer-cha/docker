@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "octoeverywhere-bambu-connect",
+      "image": "octoeverywhere/octoeverywhere:latest",
+      "isMain": true,
+      "environment": [
+        {
+          "key": "COMPANION_MODE",
+          "value": "bambu"
+        },
+        {
+          "key": "ACCESS_CODE",
+          "value": "${ACCESS_CODE}"
+        },
+        {
+          "key": "SERIAL_NUMBER",
+          "value": "${SERIAL_NUMBER}"
+        },
+        {
+          "key": "PRINTER_IP",
+          "value": "${PRINTER_IP}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data",
+          "containerPath": "/data"
+        }
+      ]
+    }
+  ]
+}
+

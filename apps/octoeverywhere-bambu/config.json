@@ -1,0 +1,50 @@
+{
+  "name": "OctoEverywhere Bambu Connect",
+  "id": "octoeverywhere-bambu",
+  "urn": "docker:octoeverywhere-bambu",
+  "available": true,
+  "short_desc": "拓竹3D打印机AI检测（云）",
+  "author": "OctoEverywhere",
+  "port": 8080,
+  "categories": [
+    "utilities",
+    "automation"
+  ],
+  "description": "OctoEverywhere Bambu Connect allows you to remotely access and control your Bambu Lab 3D printer from anywhere in the world. Get real-time monitoring, notifications, and full control through a secure connection.",
+  "tipi_version": 1,
+  "version": "v1.0",
+  "source": "https://github.com/QuinnDamerell/OctoEverywhere",
+  "website": "https://octoeverywhere.com/",
+  "exposable": false,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1729742400000,
+  "updated_at": 1729742400000,
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "Access Code（访问码）",
+      "env_variable": "ACCESS_CODE",
+      "required": true,
+      "hint": "从 https://octoeverywhere.com/s/access-code 获取"
+    },
+    {
+      "type": "text",
+      "label": "Serial Number（打印机序列号）",
+      "env_variable": "SERIAL_NUMBER",
+      "required": true,
+      "hint": "从 https://octoeverywhere.com/s/bambu-sn 获取打印机序列号"
+    },
+    {
+      "type": "text",
+      "label": "Printer IP（打印机IP地址）",
+      "env_variable": "PRINTER_IP",
+      "required": true,
+      "hint": "打印机的局域网IP地址，格式: 192.168.1.100"
+    }
+  ]
+}
+

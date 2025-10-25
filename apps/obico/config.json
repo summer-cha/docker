@@ -7,8 +7,8 @@
   "author": "TheSpaghettiDetective",
   "port": 3333,
   "categories": [
-    "utilities",
-    "automation"
+    "chacha",
+    "print"
   ],
   "description": "Obico ML API provides AI-powered failure detection for 3D printing. This service can be called via REST API to detect printing failures in real-time.",
   "tipi_version": 1,
