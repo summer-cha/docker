@@ -7,8 +7,8 @@
   "author": "OctoEverywhere",
   "port": 8080,
   "categories": [
-    "utilities",
-    "automation"
+    "chacha",
+    "print"
   ],
   "description": "OctoEverywhere Bambu Connect allows you to remotely access and control your Bambu Lab 3D printer from anywhere in the world. Get real-time monitoring, notifications, and full control through a secure connection.",
   "tipi_version": 1,

@@ -46,12 +46,6 @@
 
 
 
-## 常见问题
-
-**Q: Access Code 在哪里获取？**
-
-A: 访问 [octoeverywhere.com/s/access-code](https://octoeverywhere.com/s/access-code) 注册并获取。免费账号即可使用基本功能。
-
 
 ## 技术参数
 
