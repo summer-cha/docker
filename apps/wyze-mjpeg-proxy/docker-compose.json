@@ -4,11 +4,10 @@
     {
       "name": "config-generator",
       "image": "alpine:latest",
-      "restart": "no",
       "command": [
         "sh",
         "-c",
-        "printf 'verbosity: 0\\nport: 8190\\nstreams:\\n  - name: %s\\n    source: %s\\n    resolution: %s\\n    quality: %s\\n    framerate: %s\\n' \"$CAMERA_NAME\" \"$RTSP_SOURCE\" \"$RESOLUTION\" \"$QUALITY\" \"$FRAMERATE\" > /shared/config.yaml && echo 'Configuration generated successfully:' && cat /shared/config.yaml"
+        "if [ -f /shared/config.yaml ] && [ -f /shared/.generated ]; then echo 'Config already exists, exiting...'; exit 0; fi; printf 'verbosity: 0\\nport: 8190\\nstreams:\\n  - name: %s\\n    source: %s\\n    resolution: %s\\n    quality: %s\\n    framerate: %s\\n' \"$CAMERA_NAME\" \"$RTSP_SOURCE\" \"$RESOLUTION\" \"$QUALITY\" \"$FRAMERATE\" > /shared/config.yaml && echo 'Configuration generated successfully:' && cat /shared/config.yaml && touch /shared/.generated && sleep 5"
       ],
       "volumes": [
         {
