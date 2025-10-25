@@ -7,7 +7,7 @@
       "command": [
         "sh",
         "-c",
-        "if [ -f /shared/config.yaml ]; then echo 'Config already exists, entering standby mode...'; sleep infinity; fi; printf 'verbosity: 0\\nport: 8190\\nstreams:\\n  - name: %s\\n    source: %s\\n    resolution: %s\\n    quality: %s\\n    framerate: %s\\n' \"$CAMERA_NAME\" \"$RTSP_SOURCE\" \"$RESOLUTION\" \"$QUALITY\" \"$FRAMERATE\" > /shared/config.yaml && echo 'Configuration generated successfully:' && cat /shared/config.yaml && sleep infinity"
+        "printf 'verbosity: 0\\nport: 8190\\nstreams:\\n  - name: %s\\n    source: %s\\n    resolution: %s\\n    quality: %s\\n    framerate: %s\\n' \"$CAMERA_NAME\" \"$RTSP_SOURCE\" \"$RESOLUTION\" \"$QUALITY\" \"$FRAMERATE\" > /shared/config.yaml && cat /shared/config.yaml && sleep infinity"
       ],
       "volumes": [
         {
