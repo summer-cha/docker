@@ -4,6 +4,7 @@
     {
       "name": "config-generator",
       "image": "alpine:latest",
+      "restart": "no",
       "command": [
         "sh",
         "-c",
