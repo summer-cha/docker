@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "services": [
+    {
+      "name": "bambustudio",
+      "image": "lscr.io/linuxserver/bambustudio:latest",
+      "isMain": true,
+      "internalPort": 3001,
+      "environment": [
+        {
+          "key": "PUID",
+          "value": "1000"
+        },
+        {
+          "key": "PGID",
+          "value": "1000"
+        },
+        {
+          "key": "TZ",
+          "value": "${TZ:-Asia/Shanghai}"
+        },
+        {
+          "key": "DARK_MODE",
+          "value": "${DARK_MODE:-true}"
+        }
+      ],
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/config"
+        }
+      ],
+      "extraOptions": {
+        "shm_size": "1gb"
+      }
+    }
+  ]
+}
+

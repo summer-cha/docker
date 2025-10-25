@@ -1,0 +1,44 @@
+{
+  "name": "Bambu Studio",
+  "id": "bambustudio",
+  "urn": "docker:bambustudio",
+  "available": true,
+  "short_desc": "拓竹切片软件（网页版）",
+  "author": "LinuxServer.io",
+  "port": 3001,
+  "categories": [
+    "chacha",
+    "print"
+  ],
+  "description": "Web accessible Bambu Studio inside a container. Bambu Studio is an open-source, cutting-edge, feature-rich slicing software with project-based workflows and optimized slicing algorithms.",
+  "tipi_version": 1,
+  "version": "v02.03.00.70",
+  "source": "https://github.com/linuxserver/docker-bambustudio",
+  "website": "https://bambulab.com/en/download/studio",
+  "exposable": true,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1729742400000,
+  "updated_at": 1729742400000,
+  "dynamic_config": true,
+  "form_fields": [
+    {
+      "type": "text",
+      "label": "时区（Timezone）",
+      "env_variable": "TZ",
+      "default": "Asia/Shanghai",
+      "required": false,
+      "hint": "设置时区，如: Asia/Shanghai, America/New_York"
+    },
+    {
+      "type": "boolean",
+      "label": "启用暗色模式",
+      "env_variable": "DARK_MODE",
+      "default": "true",
+      "required": false
+    }
+  ]
+}
+
