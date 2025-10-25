@@ -1,6 +1,9 @@
 # OctoEverywhere Bambu Connect
 
-通过互联网从任何地方远程访问和控制你的 Bambu Lab 3D 打印机（LAN模式）。
+Bambu Lab 3D 打印机云端AI检测（需打印机开启LAN模式）。
+
+## 功支持机型
+Bambu Lab H2, X1, P1, or A1 Series
 
 ## 功能特点
 
