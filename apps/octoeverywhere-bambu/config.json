@@ -1,9 +1,9 @@
 {
-  "name": "OctoEverywhere Bambu Connect",
+  "name": "OctoEverywhere",
   "id": "octoeverywhere-bambu",
   "urn": "docker:octoeverywhere-bambu",
   "available": true,
-  "short_desc": "拓竹3D打印机AI检测（云）",
+  "short_desc": "拓竹3D打印机AI检测（云端）",
   "author": "OctoEverywhere",
   "port": 8080,
   "categories": [
